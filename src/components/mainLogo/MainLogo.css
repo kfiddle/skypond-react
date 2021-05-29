@@ -1,0 +1,34 @@
+.mainLogoContainer{
+    width: 100%;
+    position: fixed;
+    bottom: 10%;
+}
+
+
+
+.mainLogo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+
+.homePageTitle{
+    color: #d1d1ab;
+    font-size: 6vw;
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+.skyPondLogo{
+    width: 15vw;
+    height: 30vh;
+}
+
+
+
+
+
