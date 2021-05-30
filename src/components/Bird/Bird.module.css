@@ -1,4 +1,8 @@
 
 .bird {
     position: absolute;
+    width: 25rem;
+    bottom: 24vh;
+    left: 40vw;
+    transition: 5s;
 }
