@@ -1,15 +1,17 @@
+import React, { useState } from "react";
+
 import "./App.css";
+
 import Background from "./components/background/Background";
-import MainLogo from "./components/mainLogo/MainLogo";
+import MainLogoAndBird from "./components/mainLogoAndBird/MainLogoAndBird";
+import ContactForm from "./components/Contact/ContactForm";
 
 function App() {
-
- 
-
   return (
     <div>
       <Background />
-      <MainLogo />
+      <MainLogoAndBird />
+      <ContactForm />
     </div>
   );
 }

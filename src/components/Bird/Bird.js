@@ -35,48 +35,44 @@ const birds = [
   flyingBird13,
 ];
 
-const Bird = (props) => {
+const Bird = props => {
   let [birdStyles, setBirdStyles] = useState([0, 0, 1]);
   let [imageNumber, setImageNumber] = useState(birds[0]);
-
-  // const flipImages = () => {
-  //   for (let i = 1; i <= 25; i++) {
-
-  //     setTimeout(() => {
-  //       setImageNumber(birds[j]);
-  //       console.log(imageNumber);
-  //     }, 100 * i);
-  //   }
-  // };
 
   const flipImages = (i, imageNumber) => {
     setTimeout(() => {
       setImageNumber(birds[imageNumber]);
     }, i * 80);
-    i++;
     if (imageNumber > 12) {
       imageNumber = 8;
     }
+
+    i++;
     imageNumber++;
+
     if (i < 50) {
       flipImages(i, imageNumber);
     }
   };
 
-  const showANumber = () => {
+  const fly = () => {
     setBirdStyles([40, 15, 0]);
     flipImages(0, 1);
   };
+
+  setTimeout(fly, 2000);
 
   return (
     <Wrapper>
       <img
         className={styles.bird}
         src={imageNumber}
-        style={{ transform: `translate(${birdStyles[0]}vw, -${birdStyles[1]}vh)`, opacity:`${birdStyles[2]}` }}
-        alt="hello Im a bird"
+        style={{
+          transform: `translate(${birdStyles[0]}vw, -${birdStyles[1]}vh)`,
+          opacity: `${birdStyles[2]}`,
+        }}
+        alt="bird"
       ></img>
-      <button onClick={showANumber}>press me for bird scooting</button>
     </Wrapper>
   );
 };
