@@ -2,15 +2,21 @@ import "./MainLogo.css";
 
 import React, { useState } from "react";
 import Bird from "../Bird/Bird";
-import ContactForm from "../Contact/ContactForm";
 import MainLogo from "./MainLogo";
-import { unmountComponentAtNode } from "react-dom";
+
+
 
 const MainLogoAndBird = () => {
+  const [birdRendered, setBirdRendered] = useState(true);
+
+  setTimeout(()=> { setBirdRendered(false) }, 8000);
+
+ 
+
   return (
     <div className="mainLogoContainer">
       <MainLogo />
-      <Bird></Bird>
+      { birdRendered && <Bird></Bird> }
     </div>
   );
 };

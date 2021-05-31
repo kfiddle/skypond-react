@@ -2,4 +2,5 @@
 .contactForm {
     position: relative;
     transform: translateY(150vh);
+    transition: 3s;
 }

@@ -8,10 +8,6 @@ const MainLogo = () => {
   const [logoOpacity, setLogoOpacity] = useState(1);
 
   setTimeout(()=> { setLogoOpacity(0) }, 2000);
-    
-  
-
-   
 
   return (
     <div className="mainLogo" style={{ opacity: `${logoOpacity}` }}>

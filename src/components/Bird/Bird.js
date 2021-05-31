@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Wrapper from "../Wrapper";
 import flyingBird0 from "../../assets/flyingBird/heron_inFlight-0.png";
@@ -35,32 +35,34 @@ const birds = [
   flyingBird13,
 ];
 
-const Bird = props => {
+const Bird = (props) => {
   let [birdStyles, setBirdStyles] = useState([0, 0, 1]);
   let [imageNumber, setImageNumber] = useState(birds[0]);
 
-  const flipImages = (i, imageNumber) => {
-    setTimeout(() => {
-      setImageNumber(birds[imageNumber]);
-    }, i * 80);
-    if (imageNumber > 12) {
-      imageNumber = 8;
-    }
-
-    i++;
-    imageNumber++;
-
-    if (i < 50) {
-      flipImages(i, imageNumber);
-    }
-  };
-
-  const fly = () => {
+  useEffect(() => {
     setBirdStyles([40, 15, 0]);
-    flipImages(0, 1);
-  };
 
-  setTimeout(fly, 2000);
+    const flyAway = (i, birdNumber) => {
+      if (birdNumber > 12) {
+        birdNumber = 8;
+      }
+
+      setTimeout(() => {
+        setImageNumber(birds[birdNumber]);
+      }, 110 * i);
+
+      birdNumber++;
+      i++;
+
+      if (i < 35) {
+        flyAway(i, birdNumber);
+      }
+    };
+
+    flyAway(0, 0);
+  }, []);
+
+
 
   return (
     <Wrapper>
