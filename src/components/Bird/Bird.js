@@ -39,30 +39,29 @@ const Bird = (props) => {
   let [birdStyles, setBirdStyles] = useState([0, 0, 1]);
   let [imageNumber, setImageNumber] = useState(birds[0]);
 
-  useEffect(() => {
-    setBirdStyles([40, 15, 0]);
+  // useEffect(() => {
+  //   const flyAway = (i, birdNumber) => {
+  //     if (birdNumber > 12) {
+  //       birdNumber = 8;
+  //     }
 
-    const flyAway = (i, birdNumber) => {
-      if (birdNumber > 12) {
-        birdNumber = 8;
-      }
+  //     setTimeout(() => {
+  //       setImageNumber(birds[birdNumber]);
+  //     }, 110 * i);
 
-      setTimeout(() => {
-        setImageNumber(birds[birdNumber]);
-      }, 110 * i);
+  //     birdNumber++;
+  //     i++;
 
-      birdNumber++;
-      i++;
+  //     if (i < 35) {
+  //       flyAway(i, birdNumber);
+  //     }
+  //   };
 
-      if (i < 35) {
-        flyAway(i, birdNumber);
-      }
-    };
-
-    flyAway(0, 0);
-  }, []);
-
-
+  //   setTimeout(() => {
+  //     flyAway(0, 0);
+  //     setBirdStyles([40, 15, 0]);
+  //   }, 2000);
+  // }, []);
 
   return (
     <Wrapper>
