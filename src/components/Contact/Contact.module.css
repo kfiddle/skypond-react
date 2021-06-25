@@ -9,25 +9,26 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  transition: 2s;
+  transition: 1.5s ease-out;
 }
 
 .text {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 900;
-  line-height: 2rem;
+  line-height: 2.2rem;
+  letter-spacing: 3px;
   margin: 0 auto;
   text-align: center;
-  width: 60vw;
+  width: 60%;
   color: #8ea133;
-  /* opacity: 0; */
+  transition: 2s;
 }
 
 .contact_form {
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: 1fr 1fr;
-  margin: 2rem 0 1rem 0;
+  margin: 3rem 0 1rem 0;
 }
 
 .left_column {
@@ -44,6 +45,7 @@ input {
   border: 0.125rem solid #3d441e;
   font-family: "Quicksand";
   font-size: 1rem;
+  width: 20rem;
   margin-bottom: 0.5rem;
   padding: 1rem;
 }
@@ -62,20 +64,27 @@ textarea {
 }
 
 .submit_button {
-  
-  width: 50%;
- 
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  width: 30%;
+  margin: 5rem auto;
 }
 
 button {
-  background-color: transparent;
+  background: #8ea133;
   border: none;
-  /*color: #d1d1ab;*/
+  border-radius: 7px;
   cursor: pointer;
   font-family: "Quicksand";
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.6rem;
+  color: #d1d1ab;
   padding: 1rem;
   width: 30rem;
+  transition: opacity 2s;
+}
+
+button:hover {
+    background: #76852f;
+    color:#d6f71e;
 }
