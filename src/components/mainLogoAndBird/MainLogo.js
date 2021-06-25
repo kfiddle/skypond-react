@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 
 import styles from "./MainLogo.module.css";
 
-import skyPondSansBird from "../../assets/skyPondSansBird.png";
+import skyPondSansBird from "../../assets/skyPond_logo-01.svg";
+
+
 import Bird from "../Bird/Bird";
 
 const MainLogo = () => {
